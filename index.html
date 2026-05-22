@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <a href="#" class="logo" id="home-link">
+            <i class="ph-fill ph-storefront"></i>
+            <span>NFT Marketplace</span>
+        </a>
+        <nav class="nav">
+            <a href="#" class="nav-link">Marketplace</a>
+            <a href="#" class="nav-link">Rankings</a>
+            <a href="#" class="nav-link">Connect a wallet</a>
+            <a href="#" class="btn btn-primary"><i class="ph ph-user"></i> Sign Up</a>
+        </nav>
+        <button class="menu-toggle"><i class="ph ph-list"></i></button>
+    </header>
+
+    <!-- Main Content Area: Switches between Home and Profile -->
+    <main id="main-content">
+        <!-- Home View -->
+        <div id="home-view" class="view active-view">
+            
+            <!-- Hero Section -->
+            <section class="hero container">
+                <div class="hero-content">
+                    <h1>Discover Digital Art & Collect NFTs</h1>
+                    <p class="subtitle">NFT Marketplace UI Created With Anima For Figma. Collect, Buy And Sell Art From More Than 20k NFT Artists.</p>
+                    <button class="btn btn-primary btn-lg"><i class="ph ph-rocket-launch"></i> Get Started</button>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>240k+</h4>
+                            <p>Total Sale</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100k+</h4>
+                            <p>Auctions</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>240k+</h4>
+                            <p>Artists</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-card">
+                    <img src="images/astronaut_walking.png" alt="Space Walking" class="hero-img">
+                    <div class="card-info">
+                        <h5>Space Walking</h5>
+                        <div class="card-creator">
+                            <img src="https://picsum.photos/seed/animakid/100/100" alt="Animakid" class="avatar-sm">
+                            <span>Animakid</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trending Collection -->
+            <section class="trending container">
+                <div class="section-header">
+                    <h2>Trending Collection</h2>
+                    <p>Checkout our weekly updated trending collection.</p>
+                </div>
+                <div class="trending-grid">
+                    <!-- Cards will be populated by JS or hardcoded -->
+                    <div class="trending-card">
+                        <img src="images/dog_glasses.png" class="main-img" alt="Dog">
+                        <div class="sub-imgs">
+                            <img src="https://picsum.photos/seed/bear/200/200" alt="Bear">
+                            <img src="https://picsum.photos/seed/robotdog/200/200" alt="Robot">
+                            <div class="more-count">1025+</div>
+                        </div>
+                        <h5>DSGN Animals</h5>
+                        <div class="card-creator">
+                            <img src="https://picsum.photos/seed/mrfox/100/100" alt="MrFox" class="avatar-sm">
+                            <span>MrFox</span>
+                        </div>
+                    </div>
+
+                    <div class="trending-card">
+                        <img src="images/magic_mushrooms.png" class="main-img" alt="Mushroom">
+                        <div class="sub-imgs">
+                            <img src="https://picsum.photos/seed/shroom1/200/200" alt="Mushroom 2">
+                            <img src="https://picsum.photos/seed/shroom2/200/200" alt="Mushroom 3">
+                            <div class="more-count">1025+</div>
+                        </div>
+                        <h5>Magic Mushrooms</h5>
+                        <div class="card-creator">
+                            <img src="https://picsum.photos/seed/shroomie/100/100" alt="Shroomie" class="avatar-sm">
+                            <span>Shroomie</span>
+                        </div>
+                    </div>
+
+                    <div class="trending-card desktop-only">
+                        <img src="images/robot_skater.png" class="main-img" alt="Robot">
+                        <div class="sub-imgs">
+                            <img src="https://picsum.photos/seed/bot1/200/200" alt="Robot 2">
+                            <img src="https://picsum.photos/seed/bot2/200/200" alt="Robot 3">
+                            <div class="more-count">1025+</div>
+                        </div>
+                        <h5>Disco Machines</h5>
+                        <div class="card-creator">
+                            <img src="https://picsum.photos/seed/bekind/100/100" alt="BeKind2Robots" class="avatar-sm">
+                            <span>BeKind2Robots</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top Creators -->
+            <section class="top-creators container">
+                <div class="section-header with-button">
+                    <div>
+                        <h2>Top Creators</h2>
+                        <p>Checkout Top Rated Creators On The NFT Marketplace</p>
+                    </div>
+                    <button class="btn btn-outline desktop-only"><i class="ph ph-rocket-launch"></i> View Rankings</button>
+                </div>
+                <div class="creators-grid" id="creators-grid">
+                    <!-- Creators will be dynamically injected here -->
+                </div>
+                <button class="btn btn-outline mobile-only full-width"><i class="ph ph-rocket-launch"></i> View Rankings</button>
+            </section>
+
+            <!-- Browse Categories -->
+            <section class="categories container">
+                <div class="section-header">
+                    <h2>Browse Categories</h2>
+                </div>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Hardcoded for simplicity -->
+                </div>
+            </section>
+
+            <!-- Discover More NFTs -->
+            <section class="discover container">
+                 <div class="section-header with-button">
+                    <div>
+                        <h2>Discover More NFTs</h2>
+                        <p>Explore New Trending NFTs</p>
+                    </div>
+                    <button class="btn btn-outline desktop-only"><i class="ph ph-eye"></i> See All</button>
+                </div>
+                <div class="discover-grid" id="discover-grid">
+                    <!-- injected or hardcoded -->
+                </div>
+                <button class="btn btn-outline mobile-only full-width"><i class="ph ph-eye"></i> See All</button>
+            </section>
+
+            <!-- Magic Mushrooms Highlight -->
+            <section class="highlight">
+                <div class="highlight-overlay"></div>
+                <div class="highlight-content container">
+                    <div class="highlight-info">
+                        <div class="card-creator badge-creator">
+                            <img src="https://picsum.photos/seed/shroomie/100/100" alt="Shroomie" class="avatar-xs">
+                            <span>Shroomie</span>
+                        </div>
+                        <h2>Magic Mashrooms</h2>
+                        <button class="btn btn-white"><i class="ph ph-eye"></i> See NFT</button>
+                    </div>
+                    <div class="highlight-timer">
+                        <p class="timer-label">Auction ends in:</p>
+                        <div class="timer-display">
+                            <div class="time-unit">
+                                <h3>59</h3>
+                                <span>Hours</span>
+                            </div>
+                            <span class="colon">:</span>
+                            <div class="time-unit">
+                                <h3>59</h3>
+                                <span>Minutes</span>
+                            </div>
+                            <span class="colon">:</span>
+                            <div class="time-unit">
+                                <h3>59</h3>
+                                <span>Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section class="how-it-works container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>Find Out How To Get Started</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <i class="ph ph-wallet icon-huge"></i>
+                        <h5>Setup Your Wallet</h5>
+                        <p>Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.</p>
+                    </div>
+                    <div class="work-card">
+                        <i class="ph ph-squares-four icon-huge"></i>
+                        <h5>Create Collection</h5>
+                        <p>Upload your work and setup your collection. Add a description, social links and floor price.</p>
+                    </div>
+                    <div class="work-card">
+                        <i class="ph ph-shopping-cart icon-huge"></i>
+                        <h5>Start Earning</h5>
+                        <p>Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscribe Section -->
+            <section class="subscribe container">
+                <div class="subscribe-box">
+                    <img src="images/astronaut_reading.png" alt="Astronaut Reading" class="subscribe-img">
+                    <div class="subscribe-info">
+                        <h2>Join Our Weekly Digest</h2>
+                        <p>Get Exclusive Promotions & Updates Straight To Your Inbox.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Enter your email here" required>
+                            <button type="submit" class="btn btn-primary"><i class="ph ph-envelope-simple"></i> Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- End Home View -->
+
+        <!-- Creator Profile View -->
+        <div id="profile-view" class="view">
+            <!-- Will be dynamically populated -->
+        </div>
+
+        <!-- Category View -->
+        <div id="category-view" class="view">
+            <!-- Will be dynamically populated -->
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <i class="ph-fill ph-storefront"></i>
+                    <span>NFT Marketplace</span>
+                </a>
+                <p>NFT marketplace UI created with Anima for Figma.</p>
+                <p>Join our community</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-discord-logo"></i></a>
+                    <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                    <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#">Marketplace</a>
+                <a href="#">Rankings</a>
+                <a href="#">Connect a wallet</a>
+            </div>
+            <div class="footer-col">
+                <h4>Join Our Weekly Digest</h4>
+                <p>Get exclusive promotions & updates straight to your inbox.</p>
+                <form class="subscribe-form footer-form">
+                    <input type="email" placeholder="Enter your email here" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; NFT Market. Use this template freely.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
